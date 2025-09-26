@@ -1,0 +1,10 @@
+# Default Values for my Helm Chart
+
+container:
+  image: vmservneo01/flatris_dock:v1
+  pullPolicy: IfNotPresent
+    
+replicaCount: 1
+
+port:
+  value: 3000

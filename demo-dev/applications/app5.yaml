@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name     : myapp5
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name     : in-cluster
+    namespace: app5
+  source:
+    path   : "HelmCharts/MyChart5"
+    repoURL: "git@github.com:vmservneo01/argocd.git"
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - flatris.yaml
+
+  project: default
+  syncPolicy:
+    automated:
+      prune   : true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true         

@@ -1,0 +1,11 @@
+# Default Values for my Helm Chart
+
+container:
+  image: vmservneo01/webtest1:v1
+  pullPolicy: IfNotPresent
+
+replicaCount: 3
+
+port:
+  value: 80
+

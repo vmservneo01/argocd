@@ -1,0 +1,9 @@
+# Default Values for my Helm Chart
+
+container:
+  image: tomcat:latest
+
+replicaCount: 1
+
+port:
+  value: 8080
