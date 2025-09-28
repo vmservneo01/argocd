@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     name     : in-cluster
-    namespace: sandbox
+    namespace: sandboxx
   source:
     path   : "HelmCharts/MyChart1"
     repoURL: "git@github.com:vmservneo01/argocd.git"
